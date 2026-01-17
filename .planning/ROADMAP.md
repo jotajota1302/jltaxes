@@ -30,6 +30,14 @@ JL Taxes delivers tax filing for non-residents in Spain (Modelo 210) with a core
 - A11Y-01 to A11Y-09: Design system with 18px+ fonts, 48px touch targets, WCAG 2.1 AA contrast, keyboard navigation, screen reader support
 - I18N-01 to I18N-06: 4 languages from day one, proper locale formats
 
+**Plans:** 4 plans
+
+Plans:
+- [x] 01-01-PLAN.md - Next.js project setup with Supabase and Drizzle
+- [x] 01-02-PLAN.md - Accessible design system (18px text, 48px buttons)
+- [x] 01-03-PLAN.md - i18n infrastructure with next-intl
+- [x] 01-04-PLAN.md - Authentication flows (login, register, reset-password)
+
 **Success Criteria:**
 1. User can register with email/password in any of 4 languages
 2. User can log in and remain logged in for 30+ days without re-authentication
@@ -66,6 +74,14 @@ JL Taxes delivers tax filing for non-residents in Spain (Modelo 210) with a core
 - PROP-06: Usuario puede asignar multiples propietarios a una propiedad con % titularidad
 - PROP-07: Sistema valida que % titularidad sume 100%
 - PROP-08: Datos de propiedad se reutilizan en anos siguientes
+
+**Plans:** 4 plans
+
+Plans:
+- [ ] 02-01-PLAN.md - Database schema (owners, properties, junction table)
+- [ ] 02-02-PLAN.md - Validation utilities (NIE/NIF, IBAN, cadastral)
+- [ ] 02-03-PLAN.md - Owner management (CRUD, multi-step forms, server actions)
+- [ ] 02-04-PLAN.md - Property management (CRUD, co-owner assignment, IBI guide)
 
 **Success Criteria:**
 1. User can register physical person owner with validated NIE and fiscal residence
@@ -262,8 +278,8 @@ Applied to all phases from Phase 1 onward:
 
 | Phase | Name | Requirements | Status |
 |-------|------|--------------|--------|
-| 1 | Foundation | AUTH-01 to AUTH-05, A11Y-*, I18N-* | Complete ✓ |
-| 2 | Owner and Property Data | OWNER-01 to OWNER-07, PROP-01 to PROP-08 | Pending |
+| 1 | Foundation | AUTH-01 to AUTH-05, A11Y-*, I18N-* | Complete |
+| 2 | Owner and Property Data | OWNER-01 to OWNER-07, PROP-01 to PROP-08 | Planned (4 plans) |
 | 3 | Imputed Income Declarations | IMP-01 to IMP-08, MULTI-01 to MULTI-04 | Pending |
 | 4 | Rental Income Declarations | RENT-01 to RENT-08 | Pending |
 | 5 | Payment and Annual Renewal | PAY-01 to PAY-05, RENEW-01 to RENEW-05, NOTIF-01 to NOTIF-04 | Pending |
@@ -297,4 +313,4 @@ Applied to all phases from Phase 1 onward:
 ---
 
 *Roadmap created: 2026-01-17*
-*Last updated: 2026-01-17 (Phase 1 complete)*
+*Last updated: 2026-01-17 (Phase 2 planned)*

@@ -1,7 +1,7 @@
 # State: JL Taxes
 
 **Last Updated:** 2026-01-17
-**Session:** Phase 1 Complete
+**Session:** Phase 2 In Progress
 
 ---
 
@@ -9,28 +9,28 @@
 
 **Core Value:** Rellenas una vez, sirve para siempre. Una familia entra datos una vez, se generan todas las declaraciones.
 
-**Current Focus:** Phase 1 Complete - Ready for Phase 2 (Owner and Property Data)
+**Current Focus:** Phase 2 Plan 01 Complete - Database schema for owners and properties ready
 
 ---
 
 ## Current Position
 
-**Phase:** 1 of 6 (Foundation) - COMPLETE
-**Plan:** 4 of 4 in phase - COMPLETE
-**Status:** Phase 1 Complete
-**Last activity:** 2026-01-17 - Completed 01-04-PLAN.md (Authentication)
+**Phase:** 2 of 6 (Owner and Property Data)
+**Plan:** 1 of 4 in phase - COMPLETE
+**Status:** In Progress
+**Last activity:** 2026-01-17 - Completed 02-01-PLAN.md (Database Schema)
 
 **Progress:**
 ```
 Phase 1: [##########] 100% (4/4 plans) COMPLETE
-Phase 2: [..........] 0%
+Phase 2: [##........] 25% (1/4 plans)
 Phase 3: [..........] 0%
 Phase 4: [..........] 0%
 Phase 5: [..........] 0%
 Phase 6: [..........] 0%
 ```
 
-**Overall:** 1/6 phases complete (4 plans complete)
+**Overall:** 1/6 phases complete (5 plans complete)
 
 ---
 
@@ -38,9 +38,9 @@ Phase 6: [..........] 0%
 
 | Metric | Value |
 |--------|-------|
-| Plans executed | 4 |
-| Tasks completed | 13 |
-| Requirements delivered | AUTH-01 to AUTH-05, A11Y-01 to A11Y-06, I18N-01 to I18N-04 (15/62) |
+| Plans executed | 5 |
+| Tasks completed | 15 |
+| Requirements delivered | AUTH-01 to AUTH-05, A11Y-01 to A11Y-06, I18N-01 to I18N-04, OWNER-01 (partial), PROP-01 (partial) |
 | Phases completed | 1/6 |
 
 ---
@@ -50,7 +50,7 @@ Phase 6: [..........] 0%
 | Phase | Name | Status | Requirements |
 |-------|------|--------|--------------|
 | 1 | Foundation | COMPLETE | AUTH-01 to AUTH-05 + A11Y + I18N |
-| 2 | Owner and Property Data | Pending | OWNER-01 to OWNER-07, PROP-01 to PROP-08 |
+| 2 | Owner and Property Data | In Progress (1/4) | OWNER-01 to OWNER-07, PROP-01 to PROP-08 |
 | 3 | Imputed Income Declarations | Pending | IMP-01 to IMP-08, MULTI-01 to MULTI-04 |
 | 4 | Rental Income Declarations | Pending | RENT-01 to RENT-08 |
 | 5 | Payment and Annual Renewal | Pending | PAY-01 to PAY-05, RENEW-01 to RENEW-05, NOTIF-01 to NOTIF-04 |
@@ -81,6 +81,10 @@ Phase 6: [..........] 0%
 | Zod schemas as hooks | Required to access translations at call time | 1 |
 | getUser() in middleware | More secure than getSession() - validates JWT | 1 |
 | Server actions for auth | Not API routes - better security and DX | 1 |
+| No direct FK to auth.users | Supabase auth in separate schema, store userId conceptually | 2 |
+| Decimal(5,2) for ownership % | Allows precise splits like 33.33% + 33.33% + 33.34% | 2 |
+| Cascade delete on junction table | Prevents orphaned ownership records | 2 |
+| Street type as enum | Enforces valid Spanish street types | 2 |
 
 ### Technical Notes
 
@@ -100,6 +104,9 @@ Phase 6: [..........] 0%
 - Auth forms use react-hook-form + zodResolver pattern
 - Server actions return {error: string} or {success: string}
 - Language stored in Supabase user metadata during registration
+- Zustand with persist middleware for multi-step form state
+- ownerProperties junction table pattern: id, ownerId, propertyId, percentage, createdAt
+- Drizzle relations: many/one with explicit fields/references
 
 ### Blockers
 
@@ -117,35 +124,36 @@ Phase 6: [..........] 0%
 - [x] Define design system tokens (colors, typography, spacing)
 - [x] Configure accessible UI components (button, input, label, card, form)
 - [x] Implement authentication flows (01-04-PLAN.md)
+- [x] Create database schema with many-to-many relationships (02-01-PLAN.md)
 - [ ] Configure Supabase credentials (user setup)
+- [ ] Run drizzle-kit push to apply migration
 - [ ] Initiate Colaborador Social application with AEAT
-- [ ] Create database schema with many-to-many relationships (Phase 2)
-- [ ] Implement owner data management (Phase 2)
-- [ ] Implement property data management (Phase 2)
+- [ ] Install validation libraries (better-dni, ibantools) - 02-02
+- [ ] Implement owner data management (02-03)
+- [ ] Implement property data management (02-04)
 
 ---
 
 ## Session Continuity
 
-**Previous Session:** 2026-01-17T13:03:57Z - Completed 01-03-PLAN.md
+**Previous Session:** 2026-01-17T14:30:00Z - Completed Phase 1
 
-**Last Session:** 2026-01-17T14:30:00Z
+**Last Session:** 2026-01-17T15:08:00Z
 
-**Stopped at:** Completed Phase 1 (01-04-PLAN.md)
+**Stopped at:** Completed 02-01-PLAN.md (Database Schema)
 
-**Resume file:** None - Phase 1 complete, ready for Phase 2 planning
+**Resume file:** None
 
 **Handoff Notes:**
-- Phase 1 Foundation COMPLETE with all 4 plans executed
-- Authentication flow implemented: login, register, reset-password
-- Design system ready with accessible components (18px text, 48px buttons)
-- i18n infrastructure ready with 4 languages (es, en, de, fr)
-- All pages must be under src/app/[locale]/ path
-- User needs to configure Supabase credentials before testing auth
-- Critical: Start Colaborador Social process immediately (6+ month timeline)
-- Note: Next.js 16 middleware deprecation warning - may need migration to "proxy" in future
+- Phase 2 Plan 01 COMPLETE - Database schema extended
+- owners, properties, ownerProperties tables defined in src/db/schema.ts
+- Migration generated: drizzle/0000_overconfident_black_knight.sql
+- Zustand installed for multi-step form state (required for 02-03, 02-04)
+- Type exports available: Owner, NewOwner, Property, NewProperty, OwnerProperty
+- Next: 02-02-PLAN.md (Validation Library Setup)
+- Note: Migration needs db:push after Supabase credentials configured
 
-**Next Action:** Begin Phase 2 planning - Owner and Property Data management
+**Next Action:** Execute 02-02-PLAN.md - Install and configure validation libraries (better-dni, ibantools)
 
 ---
 

@@ -9,28 +9,28 @@
 
 **Core Value:** Rellenas una vez, sirve para siempre. Una familia entra datos una vez, se generan todas las declaraciones.
 
-**Current Focus:** Phase 2 Plan 01 Complete - Database schema for owners and properties ready
+**Current Focus:** Phase 2 Plan 02 Complete - Validation libraries ready for form integration
 
 ---
 
 ## Current Position
 
 **Phase:** 2 of 6 (Owner and Property Data)
-**Plan:** 1 of 4 in phase - COMPLETE
+**Plan:** 2 of 4 in phase - COMPLETE
 **Status:** In Progress
-**Last activity:** 2026-01-17 - Completed 02-01-PLAN.md (Database Schema)
+**Last activity:** 2026-01-17 - Completed 02-02-PLAN.md (Validation Library Setup)
 
 **Progress:**
 ```
 Phase 1: [##########] 100% (4/4 plans) COMPLETE
-Phase 2: [##........] 25% (1/4 plans)
+Phase 2: [#####.....] 50% (2/4 plans)
 Phase 3: [..........] 0%
 Phase 4: [..........] 0%
 Phase 5: [..........] 0%
 Phase 6: [..........] 0%
 ```
 
-**Overall:** 1/6 phases complete (5 plans complete)
+**Overall:** 1/6 phases complete (6 plans complete)
 
 ---
 
@@ -38,8 +38,8 @@ Phase 6: [..........] 0%
 
 | Metric | Value |
 |--------|-------|
-| Plans executed | 5 |
-| Tasks completed | 15 |
+| Plans executed | 6 |
+| Tasks completed | 17 |
 | Requirements delivered | AUTH-01 to AUTH-05, A11Y-01 to A11Y-06, I18N-01 to I18N-04, OWNER-01 (partial), PROP-01 (partial) |
 | Phases completed | 1/6 |
 
@@ -50,7 +50,7 @@ Phase 6: [..........] 0%
 | Phase | Name | Status | Requirements |
 |-------|------|--------|--------------|
 | 1 | Foundation | COMPLETE | AUTH-01 to AUTH-05 + A11Y + I18N |
-| 2 | Owner and Property Data | In Progress (1/4) | OWNER-01 to OWNER-07, PROP-01 to PROP-08 |
+| 2 | Owner and Property Data | In Progress (2/4) | OWNER-01 to OWNER-07, PROP-01 to PROP-08 |
 | 3 | Imputed Income Declarations | Pending | IMP-01 to IMP-08, MULTI-01 to MULTI-04 |
 | 4 | Rental Income Declarations | Pending | RENT-01 to RENT-08 |
 | 5 | Payment and Annual Renewal | Pending | PAY-01 to PAY-05, RENEW-01 to RENEW-05, NOTIF-01 to NOTIF-04 |
@@ -85,12 +85,16 @@ Phase 6: [..........] 0%
 | Decimal(5,2) for ownership % | Allows precise splits like 33.33% + 33.33% + 33.34% | 2 |
 | Cascade delete on junction table | Prevents orphaned ownership records | 2 |
 | Street type as enum | Enforces valid Spanish street types | 2 |
+| better-dni for NIE/NIF validation | Checksum verification, not just regex; handles X/Y/Z prefix | 2 |
+| ibantools for IBAN validation | Error codes for i18n, zero dependencies | 2 |
+| Custom cadastral validation | No reliable npm library exists; documented algorithm | 2 |
+| Basis points for percentages | Avoids floating point precision issues (33.33+33.33+33.34=100) | 2 |
 
 ### Technical Notes
 
 - NIE validation: X/Y/Z + 7 digits + control letter (checksum)
 - NIF validation: 8 digits + control letter
-- Cadastral reference: 20 alphanumeric characters
+- Cadastral reference: 20 alphanumeric characters with control digits at positions 18-19
 - Cadastral rate: 1.1% (collective revision) vs 2% (individual revision, or no revision in 10+ years)
 - Tax rate: 19% EU/EEA, 24% rest of world
 - Supabase server client: async function with cookies() for App Router
@@ -107,6 +111,9 @@ Phase 6: [..........] 0%
 - Zustand with persist middleware for multi-step form state
 - ownerProperties junction table pattern: id, ownerId, propertyId, percentage, createdAt
 - Drizzle relations: many/one with explicit fields/references
+- Validators import from @/lib/validators (barrel export)
+- IBAN error codes: ibanRequired, ibanCountryInvalid, ibanLengthInvalid, ibanChecksumInvalid
+- Ownership error codes: atLeastOneOwner, percentageUnder100, percentageOver100, percentageMustBePositive
 
 ### Blockers
 
@@ -125,10 +132,10 @@ Phase 6: [..........] 0%
 - [x] Configure accessible UI components (button, input, label, card, form)
 - [x] Implement authentication flows (01-04-PLAN.md)
 - [x] Create database schema with many-to-many relationships (02-01-PLAN.md)
+- [x] Install validation libraries (better-dni, ibantools) - 02-02
 - [ ] Configure Supabase credentials (user setup)
 - [ ] Run drizzle-kit push to apply migration
 - [ ] Initiate Colaborador Social application with AEAT
-- [ ] Install validation libraries (better-dni, ibantools) - 02-02
 - [ ] Implement owner data management (02-03)
 - [ ] Implement property data management (02-04)
 
@@ -136,24 +143,26 @@ Phase 6: [..........] 0%
 
 ## Session Continuity
 
-**Previous Session:** 2026-01-17T14:30:00Z - Completed Phase 1
+**Previous Session:** 2026-01-17T15:08:00Z - Completed 02-01-PLAN.md
 
-**Last Session:** 2026-01-17T15:08:00Z
+**Last Session:** 2026-01-17T16:04:00Z
 
-**Stopped at:** Completed 02-01-PLAN.md (Database Schema)
+**Stopped at:** Completed 02-02-PLAN.md (Validation Library Setup)
 
 **Resume file:** None
 
 **Handoff Notes:**
-- Phase 2 Plan 01 COMPLETE - Database schema extended
-- owners, properties, ownerProperties tables defined in src/db/schema.ts
-- Migration generated: drizzle/0000_overconfident_black_knight.sql
-- Zustand installed for multi-step form state (required for 02-03, 02-04)
-- Type exports available: Owner, NewOwner, Property, NewProperty, OwnerProperty
-- Next: 02-02-PLAN.md (Validation Library Setup)
-- Note: Migration needs db:push after Supabase credentials configured
+- Phase 2 Plan 02 COMPLETE - Validation libraries installed and configured
+- Validators available at src/lib/validators/index.ts
+- Exports: validateNieNif, getNieNifType, normalizeNieNif (NIE/NIF)
+- Exports: validateIban, formatIbanForStorage, IbanValidationResult (IBAN)
+- Exports: validateCadastralReference, normalizeCadastralReference (Cadastral)
+- Exports: validateOwnershipPercentages, OwnershipEntry, OwnershipValidationResult (Ownership)
+- All validators handle empty/null input gracefully
+- Error codes ready for i18n integration with Zod schemas
+- Next: 02-03-PLAN.md (Owner Forms)
 
-**Next Action:** Execute 02-02-PLAN.md - Install and configure validation libraries (better-dni, ibantools)
+**Next Action:** Execute 02-03-PLAN.md - Owner data management forms and pages
 
 ---
 

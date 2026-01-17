@@ -3,6 +3,8 @@ import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default async function HomePage({
   params,
@@ -75,6 +77,59 @@ function HomeContent() {
             <Link href="/register">{t('home.cta')}</Link>
           </Button>
         </div>
+
+        {/* Design System Showcase - A11Y Demo */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Design System</CardTitle>
+            <CardDescription>
+              Accessible components with 18px+ text, 48px touch targets, and WCAG 2.1 AA contrast
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            {/* Button variants showcase */}
+            <div className="space-y-2">
+              <Label>Buttons (48px minimum height)</Label>
+              <div className="flex flex-wrap gap-4">
+                <Button>Default</Button>
+                <Button variant="secondary">Secondary</Button>
+                <Button variant="outline">Outline</Button>
+                <Button variant="destructive">Destructive</Button>
+                <Button variant="ghost">Ghost</Button>
+                <Button size="lg">Large</Button>
+              </div>
+            </div>
+
+            {/* Form fields showcase */}
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="demo-email">Email address</Label>
+                <Input id="demo-email" type="email" placeholder="user@example.com" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="demo-password">Password</Label>
+                <Input id="demo-password" type="password" placeholder="Enter your password" />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Accessibility checklist */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Accessibility Checklist</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>A11Y-01: Base font 18px minimum</li>
+              <li>A11Y-02: Touch targets 48x48px minimum</li>
+              <li>A11Y-03: WCAG 2.1 AA contrast (4.5:1)</li>
+              <li>A11Y-04: Visible labels on all fields</li>
+              <li>A11Y-05: Clear error messages (form validation)</li>
+              <li>A11Y-06: Keyboard navigation with visible focus</li>
+            </ul>
+          </CardContent>
+        </Card>
       </div>
     </main>
   );

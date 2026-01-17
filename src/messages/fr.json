@@ -14,7 +14,8 @@
     "login": "Connexion",
     "register": "Inscription",
     "logout": "Deconnexion",
-    "dashboard": "Tableau de bord"
+    "dashboard": "Tableau de bord",
+    "owners": "Proprietaires"
   },
   "auth": {
     "loginTitle": "Connexion",
@@ -47,7 +48,23 @@
     "passwordRequired": "Le mot de passe est requis",
     "passwordMinLength": "Le mot de passe doit contenir au moins 8 caracteres",
     "confirmPasswordRequired": "Veuillez confirmer votre mot de passe",
-    "passwordsMustMatch": "Les mots de passe ne correspondent pas"
+    "passwordsMustMatch": "Les mots de passe ne correspondent pas",
+    "ownerTypeRequired": "Veuillez selectionner un type de proprietaire",
+    "taxIdRequired": "Le NIE/NIF est requis",
+    "taxIdInvalid": "NIE/NIF invalide",
+    "firstNameRequired": "Le prenom est requis",
+    "lastNameRequired": "Le nom est requis",
+    "companyNameRequired": "Le nom de l'entreprise est requis",
+    "countryRequired": "Le pays est requis",
+    "countryInvalid": "Code pays invalide",
+    "addressRequired": "L'adresse est requise",
+    "cityRequired": "La ville est requise",
+    "postalCodeRequired": "Le code postal est requis",
+    "ibanRequired": "L'IBAN est requis",
+    "ibanInvalid": "IBAN invalide",
+    "ibanCountryInvalid": "Pays de l'IBAN non reconnu",
+    "ibanLengthInvalid": "Longueur de l'IBAN incorrecte",
+    "ibanChecksumInvalid": "Somme de controle IBAN invalide"
   },
   "home": {
     "title": "Bienvenue sur JL Taxes",
@@ -60,5 +77,58 @@
     "en": "English",
     "de": "Deutsch",
     "fr": "Francais"
+  },
+  "owner": {
+    "title": "Proprietaires",
+    "addNew": "Nouveau proprietaire",
+    "noOwners": "Aucun proprietaire enregistre",
+    "addFirst": "Enregistrez votre premier proprietaire pour commencer",
+    "editTitle": "Modifier le proprietaire",
+
+    "steps": {
+      "type": "Type",
+      "identity": "Identite",
+      "residence": "Residence",
+      "bank": "Banque"
+    },
+
+    "form": {
+      "ownerType": "Type de proprietaire",
+      "individual": "Particulier",
+      "company": "Entreprise",
+
+      "taxId": "NIE/NIF",
+      "taxIdHint": "Entrez votre NIE ou NIF avec la lettre de controle",
+      "taxIdValid": "Identifiant valide",
+      "taxIdInvalid": "Identifiant invalide",
+
+      "firstName": "Prenom",
+      "lastName": "Nom",
+      "companyName": "Nom de l'entreprise",
+
+      "residenceCountry": "Pays de residence fiscale",
+      "residenceAddress": "Adresse",
+      "residenceCity": "Ville",
+      "residencePostalCode": "Code postal",
+
+      "iban": "IBAN (pour les remboursements)",
+      "ibanHint": "Votre compte bancaire pour recevoir les remboursements",
+      "ibanOptional": "Optionnel - uniquement necessaire si vous attendez un remboursement"
+    },
+
+    "actions": {
+      "next": "Suivant",
+      "back": "Retour",
+      "save": "Enregistrer le proprietaire",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "confirmDelete": "Supprimer ce proprietaire?"
+    },
+
+    "success": {
+      "created": "Proprietaire cree avec succes",
+      "updated": "Proprietaire mis a jour avec succes",
+      "deleted": "Proprietaire supprime"
+    }
   }
 }

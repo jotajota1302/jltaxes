@@ -14,7 +14,8 @@
     "login": "Log in",
     "register": "Register",
     "logout": "Log out",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "owners": "Owners"
   },
   "auth": {
     "loginTitle": "Log in",
@@ -47,7 +48,23 @@
     "passwordRequired": "Password is required",
     "passwordMinLength": "Password must be at least 8 characters",
     "confirmPasswordRequired": "Please confirm your password",
-    "passwordsMustMatch": "Passwords do not match"
+    "passwordsMustMatch": "Passwords do not match",
+    "ownerTypeRequired": "Please select an owner type",
+    "taxIdRequired": "NIE/NIF is required",
+    "taxIdInvalid": "Invalid NIE/NIF",
+    "firstNameRequired": "First name is required",
+    "lastNameRequired": "Last name is required",
+    "companyNameRequired": "Company name is required",
+    "countryRequired": "Country is required",
+    "countryInvalid": "Invalid country code",
+    "addressRequired": "Address is required",
+    "cityRequired": "City is required",
+    "postalCodeRequired": "Postal code is required",
+    "ibanRequired": "IBAN is required",
+    "ibanInvalid": "Invalid IBAN",
+    "ibanCountryInvalid": "IBAN country not recognized",
+    "ibanLengthInvalid": "IBAN length is incorrect",
+    "ibanChecksumInvalid": "IBAN checksum is invalid"
   },
   "home": {
     "title": "Welcome to JL Taxes",
@@ -60,5 +77,58 @@
     "en": "English",
     "de": "Deutsch",
     "fr": "Francais"
+  },
+  "owner": {
+    "title": "Owners",
+    "addNew": "New owner",
+    "noOwners": "No owners registered",
+    "addFirst": "Register your first owner to get started",
+    "editTitle": "Edit owner",
+
+    "steps": {
+      "type": "Type",
+      "identity": "Identity",
+      "residence": "Residence",
+      "bank": "Bank"
+    },
+
+    "form": {
+      "ownerType": "Owner type",
+      "individual": "Individual",
+      "company": "Company",
+
+      "taxId": "NIE/NIF",
+      "taxIdHint": "Enter your NIE or NIF with control letter",
+      "taxIdValid": "Valid identifier",
+      "taxIdInvalid": "Invalid identifier",
+
+      "firstName": "First name",
+      "lastName": "Last name",
+      "companyName": "Company name",
+
+      "residenceCountry": "Country of tax residence",
+      "residenceAddress": "Address",
+      "residenceCity": "City",
+      "residencePostalCode": "Postal code",
+
+      "iban": "IBAN (for refunds)",
+      "ibanHint": "Your bank account to receive refunds",
+      "ibanOptional": "Optional - only needed if you expect a refund"
+    },
+
+    "actions": {
+      "next": "Next",
+      "back": "Back",
+      "save": "Save owner",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirmDelete": "Delete this owner?"
+    },
+
+    "success": {
+      "created": "Owner created successfully",
+      "updated": "Owner updated successfully",
+      "deleted": "Owner deleted"
+    }
   }
 }

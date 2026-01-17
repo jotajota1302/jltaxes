@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next';
-import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+// Note: next-intl integration will be added in 01-03-PLAN.md (i18n setup)
+// For now, using simple Next.js config
 
 const nextConfig: NextConfig = {
   experimental: {
@@ -11,4 +11,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withNextIntl(nextConfig);
+export default nextConfig;

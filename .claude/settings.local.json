@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:dashboard.iberiantax.com)",
+      "WebFetch(domain:www.iberiantax.com)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "WebSearch",
+      "WebFetch(domain:www.agenciatributaria.es)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:taxadora.com)",
+      "Bash(git push:*)",
+      "Skill(gsd:plan-phase)"
+    ]
+  }
+}

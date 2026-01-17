@@ -1,5 +1,6 @@
 import {
   pgTable,
+  pgSchema,
   uuid,
   text,
   timestamp,
@@ -12,17 +13,22 @@ import {
 import { relations } from 'drizzle-orm';
 
 // ============================================================================
+// SCHEMA DEFINITION - Using "taxes" schema to isolate from other projects
+// ============================================================================
+export const taxesSchema = pgSchema('taxes');
+
+// ============================================================================
 // ENUMS
 // ============================================================================
 
 // Language enum matching i18n config
-export const languageEnum = pgEnum('language', ['es', 'en', 'de', 'fr']);
+export const languageEnum = taxesSchema.enum('language', ['es', 'en', 'de', 'fr']);
 
 // Owner type enum: individual or company
-export const ownerTypeEnum = pgEnum('owner_type', ['individual', 'company']);
+export const ownerTypeEnum = taxesSchema.enum('owner_type', ['individual', 'company']);
 
 // Spanish street type enum
-export const streetTypeEnum = pgEnum('street_type', [
+export const streetTypeEnum = taxesSchema.enum('street_type', [
   'calle',
   'avenida',
   'plaza',
@@ -39,7 +45,7 @@ export const streetTypeEnum = pgEnum('street_type', [
 // ============================================================================
 
 // User preferences (extends Supabase auth.users via foreign key)
-export const userPreferences = pgTable('user_preferences', {
+export const userPreferences = taxesSchema.table('user_preferences', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').notNull().unique(), // References auth.users(id)
   preferredLanguage: languageEnum('preferred_language').default('es').notNull(),
@@ -52,7 +58,7 @@ export const userPreferences = pgTable('user_preferences', {
 // ============================================================================
 
 // Owners table - stores fiscal data for non-resident property owners
-export const owners = pgTable('owners', {
+export const owners = taxesSchema.table('owners', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').notNull(), // References auth.users(id) conceptually
 
@@ -89,7 +95,7 @@ export const owners = pgTable('owners', {
 // ============================================================================
 
 // Properties table - stores Spanish property data for tax declarations
-export const properties = pgTable('properties', {
+export const properties = taxesSchema.table('properties', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').notNull(), // References auth.users(id) conceptually
 
@@ -123,7 +129,7 @@ export const properties = pgTable('properties', {
 // ============================================================================
 
 // Junction table for many-to-many owner-property relationship with ownership percentage
-export const ownerProperties = pgTable('owner_properties', {
+export const ownerProperties = taxesSchema.table('owner_properties', {
   id: uuid('id').primaryKey().defaultRandom(),
   ownerId: uuid('owner_id')
     .notNull()

@@ -1,7 +1,9 @@
-CREATE TYPE "public"."language" AS ENUM('es', 'en', 'de', 'fr');--> statement-breakpoint
-CREATE TYPE "public"."owner_type" AS ENUM('individual', 'company');--> statement-breakpoint
-CREATE TYPE "public"."street_type" AS ENUM('calle', 'avenida', 'plaza', 'paseo', 'carretera', 'camino', 'travesia', 'urbanizacion', 'otro');--> statement-breakpoint
-CREATE TABLE "owner_properties" (
+CREATE SCHEMA "taxes";
+--> statement-breakpoint
+CREATE TYPE "taxes"."language" AS ENUM('es', 'en', 'de', 'fr');--> statement-breakpoint
+CREATE TYPE "taxes"."owner_type" AS ENUM('individual', 'company');--> statement-breakpoint
+CREATE TYPE "taxes"."street_type" AS ENUM('calle', 'avenida', 'plaza', 'paseo', 'carretera', 'camino', 'travesia', 'urbanizacion', 'otro');--> statement-breakpoint
+CREATE TABLE "taxes"."owner_properties" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"owner_id" uuid NOT NULL,
 	"property_id" uuid NOT NULL,
@@ -9,10 +11,10 @@ CREATE TABLE "owner_properties" (
 	"created_at" timestamp DEFAULT now() NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE "owners" (
+CREATE TABLE "taxes"."owners" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"user_id" uuid NOT NULL,
-	"owner_type" "owner_type" NOT NULL,
+	"owner_type" "taxes"."owner_type" NOT NULL,
 	"tax_id" varchar(20) NOT NULL,
 	"tax_id_type" varchar(10),
 	"first_name" varchar(100),
@@ -27,10 +29,10 @@ CREATE TABLE "owners" (
 	"updated_at" timestamp DEFAULT now() NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE "properties" (
+CREATE TABLE "taxes"."properties" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"user_id" uuid NOT NULL,
-	"street_type" "street_type" NOT NULL,
+	"street_type" "taxes"."street_type" NOT NULL,
 	"street_name" varchar(200) NOT NULL,
 	"street_number" varchar(10) NOT NULL,
 	"floor" varchar(10),
@@ -48,14 +50,14 @@ CREATE TABLE "properties" (
 	"updated_at" timestamp DEFAULT now() NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE "user_preferences" (
+CREATE TABLE "taxes"."user_preferences" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"user_id" uuid NOT NULL,
-	"preferred_language" "language" DEFAULT 'es' NOT NULL,
+	"preferred_language" "taxes"."language" DEFAULT 'es' NOT NULL,
 	"created_at" timestamp DEFAULT now() NOT NULL,
 	"updated_at" timestamp DEFAULT now() NOT NULL,
 	CONSTRAINT "user_preferences_user_id_unique" UNIQUE("user_id")
 );
 --> statement-breakpoint
-ALTER TABLE "owner_properties" ADD CONSTRAINT "owner_properties_owner_id_owners_id_fk" FOREIGN KEY ("owner_id") REFERENCES "public"."owners"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
-ALTER TABLE "owner_properties" ADD CONSTRAINT "owner_properties_property_id_properties_id_fk" FOREIGN KEY ("property_id") REFERENCES "public"."properties"("id") ON DELETE cascade ON UPDATE no action;
+ALTER TABLE "taxes"."owner_properties" ADD CONSTRAINT "owner_properties_owner_id_owners_id_fk" FOREIGN KEY ("owner_id") REFERENCES "taxes"."owners"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "taxes"."owner_properties" ADD CONSTRAINT "owner_properties_property_id_properties_id_fk" FOREIGN KEY ("property_id") REFERENCES "taxes"."properties"("id") ON DELETE cascade ON UPDATE no action;

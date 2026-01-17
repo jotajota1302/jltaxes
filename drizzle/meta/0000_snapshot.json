@@ -1,12 +1,12 @@
 {
-  "id": "8859d91a-83b9-4820-bc3b-9a6c75b710d2",
+  "id": "217c555f-35b5-46b0-bf08-29d332db5063",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.owner_properties": {
+    "taxes.owner_properties": {
       "name": "owner_properties",
-      "schema": "",
+      "schema": "taxes",
       "columns": {
         "id": {
           "name": "id",
@@ -47,6 +47,7 @@
           "name": "owner_properties_owner_id_owners_id_fk",
           "tableFrom": "owner_properties",
           "tableTo": "owners",
+          "schemaTo": "taxes",
           "columnsFrom": [
             "owner_id"
           ],
@@ -60,6 +61,7 @@
           "name": "owner_properties_property_id_properties_id_fk",
           "tableFrom": "owner_properties",
           "tableTo": "properties",
+          "schemaTo": "taxes",
           "columnsFrom": [
             "property_id"
           ],
@@ -76,9 +78,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.owners": {
+    "taxes.owners": {
       "name": "owners",
-      "schema": "",
+      "schema": "taxes",
       "columns": {
         "id": {
           "name": "id",
@@ -96,7 +98,7 @@
         "owner_type": {
           "name": "owner_type",
           "type": "owner_type",
-          "typeSchema": "public",
+          "typeSchema": "taxes",
           "primaryKey": false,
           "notNull": true
         },
@@ -183,9 +185,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.properties": {
+    "taxes.properties": {
       "name": "properties",
-      "schema": "",
+      "schema": "taxes",
       "columns": {
         "id": {
           "name": "id",
@@ -203,7 +205,7 @@
         "street_type": {
           "name": "street_type",
           "type": "street_type",
-          "typeSchema": "public",
+          "typeSchema": "taxes",
           "primaryKey": false,
           "notNull": true
         },
@@ -309,9 +311,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.user_preferences": {
+    "taxes.user_preferences": {
       "name": "user_preferences",
-      "schema": "",
+      "schema": "taxes",
       "columns": {
         "id": {
           "name": "id",
@@ -329,7 +331,7 @@
         "preferred_language": {
           "name": "preferred_language",
           "type": "language",
-          "typeSchema": "public",
+          "typeSchema": "taxes",
           "primaryKey": false,
           "notNull": true,
           "default": "'es'"
@@ -367,9 +369,9 @@
     }
   },
   "enums": {
-    "public.language": {
+    "taxes.language": {
       "name": "language",
-      "schema": "public",
+      "schema": "taxes",
       "values": [
         "es",
         "en",
@@ -377,17 +379,17 @@
         "fr"
       ]
     },
-    "public.owner_type": {
+    "taxes.owner_type": {
       "name": "owner_type",
-      "schema": "public",
+      "schema": "taxes",
       "values": [
         "individual",
         "company"
       ]
     },
-    "public.street_type": {
+    "taxes.street_type": {
       "name": "street_type",
-      "schema": "public",
+      "schema": "taxes",
       "values": [
         "calle",
         "avenida",
@@ -401,7 +403,9 @@
       ]
     }
   },
-  "schemas": {},
+  "schemas": {
+    "taxes": "taxes"
+  },
   "sequences": {},
   "roles": {},
   "policies": {},

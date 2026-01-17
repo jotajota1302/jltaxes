@@ -262,7 +262,7 @@ Applied to all phases from Phase 1 onward:
 
 | Phase | Name | Requirements | Status |
 |-------|------|--------------|--------|
-| 1 | Foundation | AUTH-01 to AUTH-05, A11Y-*, I18N-* | Pending |
+| 1 | Foundation | AUTH-01 to AUTH-05, A11Y-*, I18N-* | Complete ✓ |
 | 2 | Owner and Property Data | OWNER-01 to OWNER-07, PROP-01 to PROP-08 | Pending |
 | 3 | Imputed Income Declarations | IMP-01 to IMP-08, MULTI-01 to MULTI-04 | Pending |
 | 4 | Rental Income Declarations | RENT-01 to RENT-08 | Pending |
@@ -297,4 +297,4 @@ Applied to all phases from Phase 1 onward:
 ---
 
 *Roadmap created: 2026-01-17*
-*Last updated: 2026-01-17*
+*Last updated: 2026-01-17 (Phase 1 complete)*

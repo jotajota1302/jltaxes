@@ -9,11 +9,11 @@ Requirements para el lanzamiento inicial. Cada uno mapea a fases del roadmap.
 
 ### Autenticacion y Usuarios
 
-- [ ] **AUTH-01**: Usuario puede registrarse con email y contrasena
-- [ ] **AUTH-02**: Usuario puede iniciar sesion y mantener sesion activa
-- [ ] **AUTH-03**: Usuario puede recuperar contrasena via email
-- [ ] **AUTH-04**: Usuario puede seleccionar idioma preferido (ES/EN/DE/FR)
-- [ ] **AUTH-05**: Sesion persiste minimo 30 dias (elderly-friendly)
+- [x] **AUTH-01**: Usuario puede registrarse con email y contrasena ✓ Phase 1
+- [x] **AUTH-02**: Usuario puede iniciar sesion y mantener sesion activa ✓ Phase 1
+- [x] **AUTH-03**: Usuario puede recuperar contrasena via email ✓ Phase 1
+- [x] **AUTH-04**: Usuario puede seleccionar idioma preferido (ES/EN/DE/FR) ✓ Phase 1
+- [x] **AUTH-05**: Sesion persiste minimo 30 dias (elderly-friendly) ✓ Phase 1
 
 ### Gestion de Propietarios
 
@@ -91,22 +91,22 @@ Requirements para el lanzamiento inicial. Cada uno mapea a fases del roadmap.
 
 ### Accesibilidad (Elderly-Optimized)
 
-- [ ] **A11Y-01**: Tipografia base minimo 18px en toda la aplicacion
-- [ ] **A11Y-02**: Botones con area de toque minimo 48x48px
-- [ ] **A11Y-03**: Contraste cumple WCAG 2.1 AA (4.5:1 para texto normal)
-- [ ] **A11Y-04**: Labels siempre visibles (no solo placeholders)
-- [ ] **A11Y-05**: Errores de formulario claros e inline
-- [ ] **A11Y-06**: Navegacion completa por teclado
+- [x] **A11Y-01**: Tipografia base minimo 18px en toda la aplicacion ✓ Phase 1
+- [x] **A11Y-02**: Botones con area de toque minimo 48x48px ✓ Phase 1
+- [x] **A11Y-03**: Contraste cumple WCAG 2.1 AA (4.5:1 para texto normal) ✓ Phase 1
+- [x] **A11Y-04**: Labels siempre visibles (no solo placeholders) ✓ Phase 1
+- [x] **A11Y-05**: Errores de formulario claros e inline ✓ Phase 1
+- [x] **A11Y-06**: Navegacion completa por teclado ✓ Phase 1
 - [ ] **A11Y-07**: Compatible con lectores de pantalla
 - [ ] **A11Y-08**: Progreso de formulario siempre visible
 - [ ] **A11Y-09**: Guardado automatico de formularios
 
 ### Internacionalizacion
 
-- [ ] **I18N-01**: Interfaz disponible en espanol
-- [ ] **I18N-02**: Interfaz disponible en ingles
-- [ ] **I18N-03**: Interfaz disponible en aleman
-- [ ] **I18N-04**: Interfaz disponible en frances
+- [x] **I18N-01**: Interfaz disponible en espanol ✓ Phase 1
+- [x] **I18N-02**: Interfaz disponible en ingles ✓ Phase 1
+- [x] **I18N-03**: Interfaz disponible en aleman ✓ Phase 1
+- [x] **I18N-04**: Interfaz disponible en frances ✓ Phase 1
 - [ ] **I18N-05**: Terminologia fiscal traducida correctamente (no literal)
 - [ ] **I18N-06**: Formatos de fecha y numero segun locale del usuario
 
@@ -177,7 +177,7 @@ Que fases cubren que requirements. Actualizado con roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 to AUTH-05 | Phase 1: Foundation | Pending |
+| AUTH-01 to AUTH-05 | Phase 1: Foundation | Complete ✓ |
 | OWNER-01 to OWNER-07 | Phase 2: Owner and Property Data | Pending |
 | PROP-01 to PROP-08 | Phase 2: Owner and Property Data | Pending |
 | IMP-01 to IMP-08 | Phase 3: Imputed Income Declarations | Pending |
@@ -188,8 +188,10 @@ Que fases cubren que requirements. Actualizado con roadmap.
 | NOTIF-01 to NOTIF-04 | Phase 5: Payment and Annual Renewal | Pending |
 | AEAT-01 to AEAT-05 | Phase 6: AEAT Submission and Admin | Pending |
 | ADMIN-01 to ADMIN-06 | Phase 6: AEAT Submission and Admin | Pending |
-| A11Y-01 to A11Y-09 | All Phases (from Phase 1) | Pending |
-| I18N-01 to I18N-06 | All Phases (from Phase 1) | Pending |
+| A11Y-01 to A11Y-06 | Phase 1: Foundation | Complete ✓ |
+| A11Y-07 to A11Y-09 | Future Phases | Pending |
+| I18N-01 to I18N-04 | Phase 1: Foundation | Complete ✓ |
+| I18N-05 to I18N-06 | Future Phases | Pending |
 
 **Coverage:**
 - v1 requirements: 62 total

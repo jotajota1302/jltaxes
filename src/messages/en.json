@@ -1,0 +1,62 @@
+{
+  "common": {
+    "appName": "JL Taxes",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "back": "Back",
+    "submit": "Submit"
+  },
+  "nav": {
+    "home": "Home",
+    "login": "Log in",
+    "register": "Register",
+    "logout": "Log out",
+    "dashboard": "Dashboard"
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "loginSubtitle": "Access your account to manage your tax declarations",
+    "registerTitle": "Create account",
+    "registerSubtitle": "Register to start filing your taxes",
+    "resetPasswordTitle": "Reset password",
+    "resetPasswordSubtitle": "We will send you a link to reset your password",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "forgotPassword": "Forgot your password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signIn": "Log in",
+    "signUp": "Create account",
+    "sendResetLink": "Send reset link",
+    "backToLogin": "Back to login",
+    "confirmationEmailSent": "We have sent you a confirmation email",
+    "resetEmailSent": "We have sent you a password reset link",
+    "signUpError": "Error creating account",
+    "signInError": "Invalid email or password",
+    "resetError": "Error sending reset email"
+  },
+  "validation": {
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email",
+    "passwordRequired": "Password is required",
+    "passwordMinLength": "Password must be at least 8 characters",
+    "confirmPasswordRequired": "Please confirm your password",
+    "passwordsMustMatch": "Passwords do not match"
+  },
+  "home": {
+    "title": "Welcome to JL Taxes",
+    "subtitle": "Manage your Modelo 210 declarations easily",
+    "cta": "Get started"
+  },
+  "language": {
+    "select": "Language",
+    "es": "Espanol",
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Francais"
+  }
+}

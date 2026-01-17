@@ -1,0 +1,62 @@
+{
+  "common": {
+    "appName": "JL Taxes",
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "continue": "Weiter",
+    "back": "Zuruck",
+    "submit": "Absenden"
+  },
+  "nav": {
+    "home": "Startseite",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "dashboard": "Dashboard"
+  },
+  "auth": {
+    "loginTitle": "Anmelden",
+    "loginSubtitle": "Melden Sie sich an, um Ihre Steuererklarungen zu verwalten",
+    "registerTitle": "Konto erstellen",
+    "registerSubtitle": "Registrieren Sie sich, um Ihre Steuern einzureichen",
+    "resetPasswordTitle": "Passwort zurucksetzen",
+    "resetPasswordSubtitle": "Wir senden Ihnen einen Link zum Zurucksetzen Ihres Passworts",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestatigen",
+    "forgotPassword": "Passwort vergessen?",
+    "noAccount": "Noch kein Konto?",
+    "hasAccount": "Bereits ein Konto?",
+    "signIn": "Anmelden",
+    "signUp": "Registrieren",
+    "sendResetLink": "Link senden",
+    "backToLogin": "Zuruck zur Anmeldung",
+    "confirmationEmailSent": "Wir haben Ihnen eine Bestatigungs-E-Mail gesendet",
+    "resetEmailSent": "Wir haben Ihnen einen Link zum Zurucksetzen gesendet",
+    "signUpError": "Fehler beim Erstellen des Kontos",
+    "signInError": "Ungultige E-Mail oder Passwort",
+    "resetError": "Fehler beim Senden der E-Mail"
+  },
+  "validation": {
+    "emailRequired": "E-Mail ist erforderlich",
+    "emailInvalid": "Bitte geben Sie eine gultige E-Mail ein",
+    "passwordRequired": "Passwort ist erforderlich",
+    "passwordMinLength": "Passwort muss mindestens 8 Zeichen haben",
+    "confirmPasswordRequired": "Bitte bestatigen Sie Ihr Passwort",
+    "passwordsMustMatch": "Passworter stimmen nicht uberein"
+  },
+  "home": {
+    "title": "Willkommen bei JL Taxes",
+    "subtitle": "Verwalten Sie Ihre Modelo 210 Erklarungen einfach",
+    "cta": "Jetzt starten"
+  },
+  "language": {
+    "select": "Sprache",
+    "es": "Espanol",
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Francais"
+  }
+}

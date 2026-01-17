@@ -1,0 +1,62 @@
+{
+  "common": {
+    "appName": "JL Taxes",
+    "loading": "Cargando...",
+    "error": "Ha ocurrido un error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "continue": "Continuar",
+    "back": "Volver",
+    "submit": "Enviar"
+  },
+  "nav": {
+    "home": "Inicio",
+    "login": "Iniciar sesion",
+    "register": "Registrarse",
+    "logout": "Cerrar sesion",
+    "dashboard": "Panel"
+  },
+  "auth": {
+    "loginTitle": "Iniciar sesion",
+    "loginSubtitle": "Accede a tu cuenta para gestionar tus declaraciones",
+    "registerTitle": "Crear cuenta",
+    "registerSubtitle": "Registrate para empezar a declarar tus impuestos",
+    "resetPasswordTitle": "Recuperar contrasena",
+    "resetPasswordSubtitle": "Te enviaremos un enlace para restablecer tu contrasena",
+    "email": "Correo electronico",
+    "password": "Contrasena",
+    "confirmPassword": "Confirmar contrasena",
+    "forgotPassword": "He olvidado mi contrasena",
+    "noAccount": "No tienes cuenta?",
+    "hasAccount": "Ya tienes cuenta?",
+    "signIn": "Iniciar sesion",
+    "signUp": "Crear cuenta",
+    "sendResetLink": "Enviar enlace",
+    "backToLogin": "Volver a iniciar sesion",
+    "confirmationEmailSent": "Te hemos enviado un email de confirmacion",
+    "resetEmailSent": "Te hemos enviado un enlace para restablecer tu contrasena",
+    "signUpError": "Error al crear la cuenta",
+    "signInError": "Email o contrasena incorrectos",
+    "resetError": "Error al enviar el email"
+  },
+  "validation": {
+    "emailRequired": "El email es obligatorio",
+    "emailInvalid": "Introduce un email valido",
+    "passwordRequired": "La contrasena es obligatoria",
+    "passwordMinLength": "La contrasena debe tener al menos 8 caracteres",
+    "confirmPasswordRequired": "Confirma tu contrasena",
+    "passwordsMustMatch": "Las contrasenas no coinciden"
+  },
+  "home": {
+    "title": "Bienvenido a JL Taxes",
+    "subtitle": "Gestiona tus declaraciones del Modelo 210 de forma sencilla",
+    "cta": "Empezar ahora"
+  },
+  "language": {
+    "select": "Idioma",
+    "es": "Espanol",
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Francais"
+  }
+}

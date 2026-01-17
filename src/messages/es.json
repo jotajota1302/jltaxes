@@ -64,7 +64,20 @@
     "ibanInvalid": "El IBAN no es valido",
     "ibanCountryInvalid": "Pais del IBAN no reconocido",
     "ibanLengthInvalid": "Longitud del IBAN incorrecta",
-    "ibanChecksumInvalid": "Digito de control incorrecto"
+    "ibanChecksumInvalid": "Digito de control incorrecto",
+    "streetTypeRequired": "El tipo de via es obligatorio",
+    "streetNameRequired": "El nombre de la via es obligatorio",
+    "streetNumberRequired": "El numero es obligatorio",
+    "provinceRequired": "La provincia es obligatoria",
+    "cadastralReferenceRequired": "La referencia catastral es obligatoria",
+    "cadastralReferenceInvalid": "Referencia catastral invalida (debe tener 20 caracteres)",
+    "cadastralValueRequired": "El valor catastral es obligatorio",
+    "cadastralValueInvalid": "El valor catastral debe ser un numero positivo",
+    "atLeastOneOwner": "Debes asignar al menos un propietario",
+    "percentageUnder100": "Los porcentajes suman menos de 100%",
+    "percentageOver100": "Los porcentajes suman mas de 100%",
+    "percentageMustBePositive": "Cada porcentaje debe ser mayor que 0",
+    "percentageExceeds100": "El porcentaje no puede superar 100%"
   },
   "home": {
     "title": "Bienvenido a JL Taxes",
@@ -129,6 +142,91 @@
       "created": "Propietario creado correctamente",
       "updated": "Propietario actualizado correctamente",
       "deleted": "Propietario eliminado"
+    }
+  },
+  "property": {
+    "title": "Propiedades",
+    "addNew": "Nueva propiedad",
+    "noProperties": "No hay propiedades registradas",
+    "addFirst": "Registra tu primera propiedad para comenzar",
+    "editTitle": "Editar propiedad",
+
+    "steps": {
+      "address": "Direccion",
+      "cadastral": "Catastro",
+      "owners": "Propietarios"
+    },
+
+    "streetTypes": {
+      "calle": "Calle",
+      "avenida": "Avenida",
+      "plaza": "Plaza",
+      "paseo": "Paseo",
+      "carretera": "Carretera",
+      "camino": "Camino",
+      "travesia": "Travesia",
+      "urbanizacion": "Urbanizacion",
+      "otro": "Otro"
+    },
+
+    "form": {
+      "streetType": "Tipo de via",
+      "selectStreetType": "Selecciona tipo de via",
+      "streetName": "Nombre de la via",
+      "streetNumber": "Numero",
+      "floor": "Piso",
+      "door": "Puerta",
+      "staircase": "Escalera",
+      "block": "Bloque",
+      "city": "Municipio",
+      "province": "Provincia",
+      "postalCode": "Codigo postal",
+
+      "cadastralReference": "Referencia catastral",
+      "cadastralReferenceHint": "20 caracteres, aparece en tu recibo del IBI",
+      "cadastralValue": "Valor catastral",
+      "cadastralValueHint": "Aparece en tu recibo del IBI",
+      "collectiveRevision": "Revision catastral colectiva en los ultimos 10 anos",
+      "revisionYear": "Ano de revision",
+
+      "ownershipTitle": "Propietarios y porcentajes",
+      "ownershipHint": "Asigna propietarios y sus porcentajes de titularidad (deben sumar 100%)",
+      "addOwner": "Anadir propietario",
+      "selectOwner": "Selecciona un propietario",
+      "percentage": "Porcentaje",
+      "removeOwner": "Quitar propietario",
+      "totalPercentage": "Total",
+      "noOwnersAvailable": "No hay propietarios disponibles. Crea uno primero."
+    },
+
+    "ibiHelper": {
+      "title": "Donde encontrar el valor catastral",
+      "description": "El valor catastral aparece en tu recibo del IBI (Impuesto sobre Bienes Inmuebles).",
+      "step1": "Busca tu recibo del IBI del ultimo ano",
+      "step2": "Localiza la seccion 'Datos del inmueble'",
+      "step3": "El valor catastral aparece junto a 'Valor catastral' o 'Base imponible'",
+      "note": "Si no tienes el recibo, puedes consultarlo en la Sede Electronica del Catastro",
+      "linkText": "Ir al Catastro"
+    },
+
+    "actions": {
+      "next": "Siguiente",
+      "back": "Atras",
+      "save": "Guardar propiedad",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "confirmDelete": "Eliminar esta propiedad?"
+    },
+
+    "success": {
+      "created": "Propiedad creada correctamente",
+      "updated": "Propiedad actualizada correctamente",
+      "deleted": "Propiedad eliminada"
+    },
+
+    "errors": {
+      "noOwners": "Debes asignar al menos un propietario",
+      "percentageNot100": "Los porcentajes deben sumar exactamente 100%"
     }
   }
 }

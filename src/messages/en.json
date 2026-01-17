@@ -64,7 +64,20 @@
     "ibanInvalid": "Invalid IBAN",
     "ibanCountryInvalid": "IBAN country not recognized",
     "ibanLengthInvalid": "IBAN length is incorrect",
-    "ibanChecksumInvalid": "IBAN checksum is invalid"
+    "ibanChecksumInvalid": "IBAN checksum is invalid",
+    "streetTypeRequired": "Street type is required",
+    "streetNameRequired": "Street name is required",
+    "streetNumberRequired": "Street number is required",
+    "provinceRequired": "Province is required",
+    "cadastralReferenceRequired": "Cadastral reference is required",
+    "cadastralReferenceInvalid": "Invalid cadastral reference (must be 20 characters)",
+    "cadastralValueRequired": "Cadastral value is required",
+    "cadastralValueInvalid": "Cadastral value must be a positive number",
+    "atLeastOneOwner": "You must assign at least one owner",
+    "percentageUnder100": "Percentages sum to less than 100%",
+    "percentageOver100": "Percentages sum to more than 100%",
+    "percentageMustBePositive": "Each percentage must be greater than 0",
+    "percentageExceeds100": "Percentage cannot exceed 100%"
   },
   "home": {
     "title": "Welcome to JL Taxes",
@@ -129,6 +142,91 @@
       "created": "Owner created successfully",
       "updated": "Owner updated successfully",
       "deleted": "Owner deleted"
+    }
+  },
+  "property": {
+    "title": "Properties",
+    "addNew": "New property",
+    "noProperties": "No properties registered",
+    "addFirst": "Register your first property to get started",
+    "editTitle": "Edit property",
+
+    "steps": {
+      "address": "Address",
+      "cadastral": "Cadastral",
+      "owners": "Owners"
+    },
+
+    "streetTypes": {
+      "calle": "Street",
+      "avenida": "Avenue",
+      "plaza": "Square",
+      "paseo": "Boulevard",
+      "carretera": "Road",
+      "camino": "Lane",
+      "travesia": "Passage",
+      "urbanizacion": "Development",
+      "otro": "Other"
+    },
+
+    "form": {
+      "streetType": "Street type",
+      "selectStreetType": "Select street type",
+      "streetName": "Street name",
+      "streetNumber": "Number",
+      "floor": "Floor",
+      "door": "Door",
+      "staircase": "Staircase",
+      "block": "Block",
+      "city": "City",
+      "province": "Province",
+      "postalCode": "Postal code",
+
+      "cadastralReference": "Cadastral reference",
+      "cadastralReferenceHint": "20 characters, found on your IBI receipt",
+      "cadastralValue": "Cadastral value",
+      "cadastralValueHint": "Found on your IBI receipt",
+      "collectiveRevision": "Collective cadastral revision in the last 10 years",
+      "revisionYear": "Revision year",
+
+      "ownershipTitle": "Owners and percentages",
+      "ownershipHint": "Assign owners and their ownership percentages (must total 100%)",
+      "addOwner": "Add owner",
+      "selectOwner": "Select an owner",
+      "percentage": "Percentage",
+      "removeOwner": "Remove owner",
+      "totalPercentage": "Total",
+      "noOwnersAvailable": "No owners available. Create one first."
+    },
+
+    "ibiHelper": {
+      "title": "Where to find the cadastral value",
+      "description": "The cadastral value appears on your IBI receipt (Property Tax).",
+      "step1": "Find your latest IBI receipt",
+      "step2": "Locate the 'Property Details' section",
+      "step3": "The cadastral value appears next to 'Valor catastral' or 'Base imponible'",
+      "note": "If you don't have the receipt, you can look it up on the Cadastre website",
+      "linkText": "Go to Cadastre"
+    },
+
+    "actions": {
+      "next": "Next",
+      "back": "Back",
+      "save": "Save property",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirmDelete": "Delete this property?"
+    },
+
+    "success": {
+      "created": "Property created successfully",
+      "updated": "Property updated successfully",
+      "deleted": "Property deleted"
+    },
+
+    "errors": {
+      "noOwners": "You must assign at least one owner",
+      "percentageNot100": "Percentages must total exactly 100%"
     }
   }
 }

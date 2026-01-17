@@ -64,7 +64,20 @@
     "ibanInvalid": "IBAN invalide",
     "ibanCountryInvalid": "Pays de l'IBAN non reconnu",
     "ibanLengthInvalid": "Longueur de l'IBAN incorrecte",
-    "ibanChecksumInvalid": "Somme de controle IBAN invalide"
+    "ibanChecksumInvalid": "Somme de controle IBAN invalide",
+    "streetTypeRequired": "Le type de voie est requis",
+    "streetNameRequired": "Le nom de la voie est requis",
+    "streetNumberRequired": "Le numero est requis",
+    "provinceRequired": "La province est requise",
+    "cadastralReferenceRequired": "La reference cadastrale est requise",
+    "cadastralReferenceInvalid": "Reference cadastrale invalide (doit avoir 20 caracteres)",
+    "cadastralValueRequired": "La valeur cadastrale est requise",
+    "cadastralValueInvalid": "La valeur cadastrale doit etre un nombre positif",
+    "atLeastOneOwner": "Vous devez assigner au moins un proprietaire",
+    "percentageUnder100": "Les pourcentages totalisent moins de 100%",
+    "percentageOver100": "Les pourcentages totalisent plus de 100%",
+    "percentageMustBePositive": "Chaque pourcentage doit etre superieur a 0",
+    "percentageExceeds100": "Le pourcentage ne peut pas depasser 100%"
   },
   "home": {
     "title": "Bienvenue sur JL Taxes",
@@ -129,6 +142,91 @@
       "created": "Proprietaire cree avec succes",
       "updated": "Proprietaire mis a jour avec succes",
       "deleted": "Proprietaire supprime"
+    }
+  },
+  "property": {
+    "title": "Proprietes",
+    "addNew": "Nouvelle propriete",
+    "noProperties": "Aucune propriete enregistree",
+    "addFirst": "Enregistrez votre premiere propriete pour commencer",
+    "editTitle": "Modifier la propriete",
+
+    "steps": {
+      "address": "Adresse",
+      "cadastral": "Cadastre",
+      "owners": "Proprietaires"
+    },
+
+    "streetTypes": {
+      "calle": "Rue",
+      "avenida": "Avenue",
+      "plaza": "Place",
+      "paseo": "Boulevard",
+      "carretera": "Route",
+      "camino": "Chemin",
+      "travesia": "Passage",
+      "urbanizacion": "Lotissement",
+      "otro": "Autre"
+    },
+
+    "form": {
+      "streetType": "Type de voie",
+      "selectStreetType": "Selectionnez le type de voie",
+      "streetName": "Nom de la voie",
+      "streetNumber": "Numero",
+      "floor": "Etage",
+      "door": "Porte",
+      "staircase": "Escalier",
+      "block": "Bloc",
+      "city": "Ville",
+      "province": "Province",
+      "postalCode": "Code postal",
+
+      "cadastralReference": "Reference cadastrale",
+      "cadastralReferenceHint": "20 caracteres, figurant sur votre avis IBI",
+      "cadastralValue": "Valeur cadastrale",
+      "cadastralValueHint": "Figurant sur votre avis IBI",
+      "collectiveRevision": "Revision cadastrale collective au cours des 10 dernieres annees",
+      "revisionYear": "Annee de revision",
+
+      "ownershipTitle": "Proprietaires et pourcentages",
+      "ownershipHint": "Assignez les proprietaires et leurs pourcentages de propriete (doit totaliser 100%)",
+      "addOwner": "Ajouter un proprietaire",
+      "selectOwner": "Selectionnez un proprietaire",
+      "percentage": "Pourcentage",
+      "removeOwner": "Retirer le proprietaire",
+      "totalPercentage": "Total",
+      "noOwnersAvailable": "Aucun proprietaire disponible. Creez-en un d'abord."
+    },
+
+    "ibiHelper": {
+      "title": "Ou trouver la valeur cadastrale",
+      "description": "La valeur cadastrale figure sur votre avis IBI (Taxe fonciere).",
+      "step1": "Trouvez votre dernier avis IBI",
+      "step2": "Localisez la section 'Donnees du bien'",
+      "step3": "La valeur cadastrale apparait a cote de 'Valor catastral' ou 'Base imponible'",
+      "note": "Si vous n'avez pas l'avis, vous pouvez le consulter sur le site du Cadastre",
+      "linkText": "Aller au Cadastre"
+    },
+
+    "actions": {
+      "next": "Suivant",
+      "back": "Retour",
+      "save": "Enregistrer la propriete",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "confirmDelete": "Supprimer cette propriete?"
+    },
+
+    "success": {
+      "created": "Propriete creee avec succes",
+      "updated": "Propriete mise a jour avec succes",
+      "deleted": "Propriete supprimee"
+    },
+
+    "errors": {
+      "noOwners": "Vous devez assigner au moins un proprietaire",
+      "percentageNot100": "Les pourcentages doivent totaliser exactement 100%"
     }
   }
 }

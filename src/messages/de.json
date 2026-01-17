@@ -64,7 +64,20 @@
     "ibanInvalid": "Ungultige IBAN",
     "ibanCountryInvalid": "IBAN-Land nicht erkannt",
     "ibanLengthInvalid": "IBAN-Lange ist falsch",
-    "ibanChecksumInvalid": "IBAN-Prufsumme ist ungultig"
+    "ibanChecksumInvalid": "IBAN-Prufsumme ist ungultig",
+    "streetTypeRequired": "Strassentyp ist erforderlich",
+    "streetNameRequired": "Strassenname ist erforderlich",
+    "streetNumberRequired": "Hausnummer ist erforderlich",
+    "provinceRequired": "Provinz ist erforderlich",
+    "cadastralReferenceRequired": "Katasterreferenz ist erforderlich",
+    "cadastralReferenceInvalid": "Ungultige Katasterreferenz (muss 20 Zeichen haben)",
+    "cadastralValueRequired": "Katasterwert ist erforderlich",
+    "cadastralValueInvalid": "Katasterwert muss eine positive Zahl sein",
+    "atLeastOneOwner": "Sie mussen mindestens einen Eigentumer zuweisen",
+    "percentageUnder100": "Prozentsatze ergeben weniger als 100%",
+    "percentageOver100": "Prozentsatze ergeben mehr als 100%",
+    "percentageMustBePositive": "Jeder Prozentsatz muss grosser als 0 sein",
+    "percentageExceeds100": "Prozentsatz kann nicht uber 100% liegen"
   },
   "home": {
     "title": "Willkommen bei JL Taxes",
@@ -129,6 +142,91 @@
       "created": "Eigentumer erfolgreich erstellt",
       "updated": "Eigentumer erfolgreich aktualisiert",
       "deleted": "Eigentumer geloscht"
+    }
+  },
+  "property": {
+    "title": "Immobilien",
+    "addNew": "Neue Immobilie",
+    "noProperties": "Keine Immobilien registriert",
+    "addFirst": "Registrieren Sie Ihre erste Immobilie um zu beginnen",
+    "editTitle": "Immobilie bearbeiten",
+
+    "steps": {
+      "address": "Adresse",
+      "cadastral": "Kataster",
+      "owners": "Eigentumer"
+    },
+
+    "streetTypes": {
+      "calle": "Strasse",
+      "avenida": "Allee",
+      "plaza": "Platz",
+      "paseo": "Boulevard",
+      "carretera": "Landstrasse",
+      "camino": "Weg",
+      "travesia": "Durchgang",
+      "urbanizacion": "Wohnsiedlung",
+      "otro": "Sonstige"
+    },
+
+    "form": {
+      "streetType": "Strassentyp",
+      "selectStreetType": "Strassentyp auswahlen",
+      "streetName": "Strassenname",
+      "streetNumber": "Hausnummer",
+      "floor": "Etage",
+      "door": "Tur",
+      "staircase": "Treppenhaus",
+      "block": "Block",
+      "city": "Stadt",
+      "province": "Provinz",
+      "postalCode": "Postleitzahl",
+
+      "cadastralReference": "Katasterreferenz",
+      "cadastralReferenceHint": "20 Zeichen, auf Ihrem IBI-Beleg zu finden",
+      "cadastralValue": "Katasterwert",
+      "cadastralValueHint": "Auf Ihrem IBI-Beleg zu finden",
+      "collectiveRevision": "Kollektive Katasterrevision in den letzten 10 Jahren",
+      "revisionYear": "Revisionsjahr",
+
+      "ownershipTitle": "Eigentumer und Anteile",
+      "ownershipHint": "Weisen Sie Eigentumer und ihre Eigentumsanteile zu (muss 100% ergeben)",
+      "addOwner": "Eigentumer hinzufugen",
+      "selectOwner": "Eigentumer auswahlen",
+      "percentage": "Prozentsatz",
+      "removeOwner": "Eigentumer entfernen",
+      "totalPercentage": "Gesamt",
+      "noOwnersAvailable": "Keine Eigentumer verfugbar. Erstellen Sie zuerst einen."
+    },
+
+    "ibiHelper": {
+      "title": "Wo finde ich den Katasterwert",
+      "description": "Der Katasterwert erscheint auf Ihrem IBI-Beleg (Grundsteuer).",
+      "step1": "Finden Sie Ihren aktuellen IBI-Beleg",
+      "step2": "Suchen Sie den Abschnitt 'Immobiliendaten'",
+      "step3": "Der Katasterwert erscheint neben 'Valor catastral' oder 'Base imponible'",
+      "note": "Wenn Sie den Beleg nicht haben, konnen Sie ihn auf der Kataster-Website nachschlagen",
+      "linkText": "Zum Kataster"
+    },
+
+    "actions": {
+      "next": "Weiter",
+      "back": "Zuruck",
+      "save": "Immobilie speichern",
+      "edit": "Bearbeiten",
+      "delete": "Loschen",
+      "confirmDelete": "Diese Immobilie loschen?"
+    },
+
+    "success": {
+      "created": "Immobilie erfolgreich erstellt",
+      "updated": "Immobilie erfolgreich aktualisiert",
+      "deleted": "Immobilie geloscht"
+    },
+
+    "errors": {
+      "noOwners": "Sie mussen mindestens einen Eigentumer zuweisen",
+      "percentageNot100": "Prozentsatze mussen genau 100% ergeben"
     }
   }
 }

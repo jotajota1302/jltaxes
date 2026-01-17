@@ -11,10 +11,10 @@ import { deleteProperty } from '@/app/[locale]/(protected)/properties/actions';
 interface PropertyOwnership {
   ownerId: string;
   ownershipPercentage: string;
-  ownerName?: string;
-  ownerLastName?: string;
+  ownerName?: string | null;
+  ownerLastName?: string | null;
   companyName?: string | null;
-  ownerType?: string;
+  ownerType?: string | null;
 }
 
 interface PropertyWithOwners {

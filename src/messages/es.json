@@ -37,7 +37,9 @@
     "resetEmailSent": "Te hemos enviado un enlace para restablecer tu contrasena",
     "signUpError": "Error al crear la cuenta",
     "signInError": "Email o contrasena incorrectos",
-    "resetError": "Error al enviar el email"
+    "resetError": "Error al enviar el email",
+    "passwordUpdated": "Contrasena actualizada correctamente",
+    "submit": "Enviar"
   },
   "validation": {
     "emailRequired": "El email es obligatorio",

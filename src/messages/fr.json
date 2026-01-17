@@ -37,7 +37,9 @@
     "resetEmailSent": "Nous vous avons envoye un lien de reinitialisation",
     "signUpError": "Erreur lors de la creation du compte",
     "signInError": "Email ou mot de passe invalide",
-    "resetError": "Erreur lors de l'envoi de l'email"
+    "resetError": "Erreur lors de l'envoi de l'email",
+    "passwordUpdated": "Mot de passe mis a jour avec succes",
+    "submit": "Envoyer"
   },
   "validation": {
     "emailRequired": "L'email est requis",

@@ -37,7 +37,9 @@
     "resetEmailSent": "Wir haben Ihnen einen Link zum Zurucksetzen gesendet",
     "signUpError": "Fehler beim Erstellen des Kontos",
     "signInError": "Ungultige E-Mail oder Passwort",
-    "resetError": "Fehler beim Senden der E-Mail"
+    "resetError": "Fehler beim Senden der E-Mail",
+    "passwordUpdated": "Passwort erfolgreich aktualisiert",
+    "submit": "Absenden"
   },
   "validation": {
     "emailRequired": "E-Mail ist erforderlich",

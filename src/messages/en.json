@@ -37,7 +37,9 @@
     "resetEmailSent": "We have sent you a password reset link",
     "signUpError": "Error creating account",
     "signInError": "Invalid email or password",
-    "resetError": "Error sending reset email"
+    "resetError": "Error sending reset email",
+    "passwordUpdated": "Password updated successfully",
+    "submit": "Submit"
   },
   "validation": {
     "emailRequired": "Email is required",

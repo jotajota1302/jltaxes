@@ -86,10 +86,10 @@
   },
   "language": {
     "select": "Sprache",
-    "es": "Espanol",
-    "en": "English",
+    "es": "Spanisch",
+    "en": "Englisch",
     "de": "Deutsch",
-    "fr": "Francais"
+    "fr": "Französisch"
   },
   "owner": {
     "title": "Eigentumer",

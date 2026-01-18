@@ -86,10 +86,10 @@
   },
   "language": {
     "select": "Langue",
-    "es": "Espanol",
-    "en": "English",
-    "de": "Deutsch",
-    "fr": "Francais"
+    "es": "Espagnol",
+    "en": "Anglais",
+    "de": "Allemand",
+    "fr": "Français"
   },
   "owner": {
     "title": "Proprietaires",

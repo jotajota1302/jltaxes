@@ -87,9 +87,9 @@
   "language": {
     "select": "Idioma",
     "es": "Español",
-    "en": "English",
-    "de": "Deutsch",
-    "fr": "Français"
+    "en": "Inglés",
+    "de": "Alemán",
+    "fr": "Francés"
   },
   "owner": {
     "title": "Propietarios",
